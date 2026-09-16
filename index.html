@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomMotor.id - Toko Custom Motor Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span class="logo-icon">🏍️</span>
+                <h1>Custom<span>Motor</span>.id</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#katalog">Katalog</a></li>
+                    <li><a href="#penawaran">Penawaran</a></li>
+                    <li><a href="#kontak" class="btn-nav">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">🔥 Spesialis Motor Custom #1 di Indonesia</span>
+                <h2>Wujudkan Motor <span>Impianmu</span> Jadi Nyata</h2>
+                <p>Kami melayani custom motor segala jenis — dari Cafe Racer, Bobber, Scrambler, hingga Chopper. Dikerjakan oleh tangan-tangan ahli berpengalaman lebih dari 10 tahun.</p>
+                <div class="hero-buttons">
+                    <a href="#katalog" class="btn btn-primary">Lihat Katalog</a>
+                    <a href="#penawaran" class="btn btn-outline">Penawaran Spesial</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <h3>500+</h3>
+                        <p>Motor Custom</p>
+                    </div>
+                    <div>
+                        <h3>10+</h3>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                    <div>
+                        <h3>4.9★</h3>
+                        <p>Rating Pelanggan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-box">🏍️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section class="layanan" id="layanan">
+        <div class="container">
+            <div class="section-title">
+                <span>LAYANAN KAMI</span>
+                <h2>Layanan Custom Terlengkap</h2>
+                <p>Klik kartu layanan untuk melihat detail apa saja yang akan kamu dapatkan.</p>
+            </div>
+            <div class="layanan-grid">
+
+                <!-- 1. CUSTOM FULL BODY -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">🎨</div>
+                        <h3>Custom Full Body</h3>
+                    </div>
+                    <p class="layanan-brief">Desain ulang body motor sesuai keinginan Anda, dari tangki, jok, sampai cat custom.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Desain ulang tangki (custom bentuk & ukuran)</li>
+                            <li>✅ Modifikasi jok (single seat, brat, atau custom)</li>
+                            <li>✅ Custom fender depan & belakang</li>
+                            <li>✅ Ganti setang (clip-on, drag bar, atau custom)</li>
+                            <li>✅ Custom lampu depan & belakang</li>
+                            <li>✅ Cat full body premium (pilihan warna bebas)</li>
+                            <li>✅ Desain 3D sebelum pengerjaan</li>
+                            <li>✅ Garansi pengerjaan 1 tahun</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 3-4 minggu</span>
+                            <span>💰 Mulai Rp 8.500.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <!-- 2. UPGRADE MESIN -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">⚙️</div>
+                        <h3>Upgrade Mesin</h3>
+                    </div>
+                    <p class="layanan-brief">Tuning mesin, bore up, dan upgrade performa untuk tenaga maksimal.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Bore up (dari 150cc sampai 300cc+)</li>
+                            <li>✅ Porting polish cylinder head</li>
+                            <li>✅ Upgrade karburator / injektor</li>
+                            <li>✅ Custom knalpot racing (full system)</li>
+                            <li>✅ Upgrade CDI & kelistrikan</li>
+                            <li>✅ Tuning ECU / remap (untuk injeksi)</li>
+                            <li>✅ Upgrade kopling & gir</li>
+                            <li>✅ Dyno test + sertifikat tenaga</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 1-2 minggu</span>
+                            <span>💰 Mulai Rp 4.500.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <!-- 3. RESTORASI KLASIK -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">🔧</div>
+                        <h3>Restorasi Klasik</h3>
+                    </div>
+                    <p class="layanan-brief">Kembalikan kejayaan motor klasik Anda dengan restorasi detail dan original.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Bongkar total & pembersihan menyeluruh</li>
+                            <li>✅ Restorasi rangka (repaint + anti karat)</li>
+                            <li>✅ Rebuild mesin (ganti part aus)</li>
+                            <li>✅ Chrome ulang part original</li>
+                            <li>✅ Restorasi tangki & panel bodi</li>
+                            <li>✅ Ganti kabel & sistem kelistrikan baru</li>
+                            <li>✅ Cat sesuai warna original pabrik</li>
+                            <li>✅ Pencarian spare part langka (jika perlu)</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 6-8 minggu</span>
+                            <span>💰 Mulai Rp 15.000.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <!-- 4. CUSTOM KNALPOT -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">💨</div>
+                        <h3>Custom Knalpot</h3>
+                    </div>
+                    <p class="layanan-brief">Knalpot custom dengan suara dan desain sesuai karakter motor Anda.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Pilihan model: slip-on / full system</li>
+                            <li>✅ Bahan stainless, titanium, atau besi</li>
+                            <li>✅ Atur karakter suara (bass, nyaring, halus)</li>
+                            <li>✅ Custom bentuk (bullet, megaphone, GP style)</li>
+                            <li>✅ Custom warna & finishing</li>
+                            <li>✅ Bracket custom sesuai motor</li>
+                            <li>✅ DB killer (opsional agar tidak terlalu bising)</li>
+                            <li>✅ Garansi las 6 bulan</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 3-7 hari</span>
+                            <span>💰 Mulai Rp 1.500.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <!-- 5. AIRBRUSH & CAT -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">✨</div>
+                        <h3>Airbrush & Cat</h3>
+                    </div>
+                    <p class="layanan-brief">Cat custom dengan airbrush artistik, dari motif tribal sampai grafis modern.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Cat dasar (primer + epoxy anti karat)</li>
+                            <li>✅ Cat warna solid / metalik / candi</li>
+                            <li>✅ Airbrush custom sesuai request</li>
+                            <li>✅ Motif: tribal, flame, grafis, karakter</li>
+                            <li>✅ Clear coat glossy / doff</li>
+                            <li>✅ Cutting sticker & striping</li>
+                            <li>✅ Poles akhir agar mengkilap</li>
+                            <li>✅ Garansi cat tidak mengelupas 1 tahun</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 1-3 minggu</span>
+                            <span>💰 Mulai Rp 2.500.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <!-- 6. COATING & DETAILING -->
+                <div class="layanan-card" onclick="toggleLayanan(this)">
+                    <div class="layanan-header">
+                        <div class="icon">🛡️</div>
+                        <h3>Coating & Detailing</h3>
+                    </div>
+                    <p class="layanan-brief">Perlindungan cat dengan coating premium agar motor selalu kinclong.</p>
+
+                    <div class="layanan-detail">
+                        <h4>Yang kamu dapatkan:</h4>
+                        <ul>
+                            <li>✅ Cuci steam + pembersihan menyeluruh</li>
+                            <li>✅ Poles bodi (hilangkan baret halus)</li>
+                            <li>✅ Coating ceramic (tahan 1-2 tahun)</li>
+                            <li>✅ Coating velg & mesin</li>
+                            <li>✅ Coating kaca lampu & windshield</li>
+                            <li>✅ Wax premium untuk finishing</li>
+                            <li>✅ Perawatan karet & kabel</li>
+                            <li>✅ Free konsultasi perawatan rutin</li>
+                        </ul>
+                        <div class="layanan-estimasi">
+                            <span>⏱️ Estimasi: 1-2 hari</span>
+                            <span>💰 Mulai Rp 350.000</span>
+                        </div>
+                    </div>
+
+                    <span class="toggle-icon">+</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT TOGGLE -->
+    <script>
+        function toggleLayanan(card) {
+            // Tutup kartu lain yang sedang terbuka (opsional - hilangkan jika ingin multi-open)
+            document.querySelectorAll('.layanan-card').forEach(function(item) {
+                if (item !== card) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle kartu yang diklik
+            card.classList.toggle('active');
+        }
+    </script>
+
+    <!-- KATALOG JENIS MOTOR CUSTOM -->
+    <section class="katalog" id="katalog">
+        <div class="container">
+            <div class="section-title">
+                <span>KATALOG</span>
+                <h2>Macam-Macam Jenis Motor Custom</h2>
+                <p>Pilih gaya custom yang paling sesuai dengan kepribadianmu.</p>
+            </div>
+            <div class="katalog-grid">
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="caferacer-custom.jpg" alt="Cafe Racer">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Populer</span>
+                        <h3>Cafe Racer</h3>
+                        <p>Gaya klasik dengan posisi duduk sporty, jok single, dan setang rendah. Cocok untuk riding santai di dalam kota.</p>
+                        <div class="price">Mulai dari <strong>Rp 8.500.000</strong></div>
+                    </div>
+                </div>
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="bobber-custom.jpg" alt="Bobber">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Best Seller</span>
+                        <h3>Bobber</h3>
+                        <p>Tangki kecil, jok tunggal rendah, dan ban tebal. Karakter motor minimalis yang garang.</p>
+                        <div class="price">Mulai dari <strong>Rp 12.000.000</strong></div>
+                    </div>
+                </div>
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="scramble.jpeg" alt="Scrambler">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Adventure</span>
+                        <h3>Scrambler</h3>
+                        <p>Posisi duduk tegak, ban dual purpose, dan knalpot tinggi. Siap melibas on-road maupun off-road.</p>
+                        <div class="price">Mulai dari <strong>Rp 10.500.000</strong></div>
+                    </div>
+                </div>
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="chopper.jfif" alt="Chopper">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Ekstrem</span>
+                        <h3>Chopper</h3>
+                        <p>Garpu depan panjang, setang tinggi, dan posisi duduk santai. Simbol kebebasan jalanan.</p>
+                        <div class="price">Mulai dari <strong>Rp 18.000.000</strong></div>
+                    </div>
+                </div>
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="bratstyle.jfif" alt="Brat Style">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Retro</span>
+                        <h3>Brat Style</h3>
+                        <p>Gaya custom Jepang dengan jok flat, ban tebal, dan warna solid. Sederhana tapi berkelas.</p>
+                        <div class="price">Mulai dari <strong>Rp 9.000.000</strong></div>
+                    </div>
+                </div>
+
+                <div class="katalog-card">
+                    <div class="katalog-img">
+                        <img src="flattracker.jfif" alt="Flat Tracker">
+                    </div>
+                    <div class="katalog-body">
+                        <span class="tag">Racing</span>
+                        <h3>Flat Tracker</h3>
+                        <p>Inspirasi dari motor balap oval Amerika. Setang lebar, jok rata, dan tangki ramping.</p>
+                        <div class="price">Mulai dari <strong>Rp 11.500.000</strong></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PENAWARAN -->
+    <section class="penawaran" id="penawaran">
+        <div class="container">
+            <div class="section-title light">
+                <span>PENAWARAN SPESIAL</span>
+                <h2>Promo Bulan Ini 🔥</h2>
+                <p>Dapatkan harga spesial dan bonus eksklusif untuk custom motor kesayanganmu.</p>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-badge">HEMAT 20%</div>
+                    <h3>Paket Custom Cafe Racer</h3>
+                    <p class="promo-desc">Full body custom + cat premium + knalpot racing.</p>
+                    <div class="promo-price">
+                        <span class="old">Rp 12.500.000</span>
+                        <span class="new">Rp 9.900.000</span>
+                    </div>
+                    <ul class="promo-list">
+                        <li>✓ Desain 3D sebelum pengerjaan</li>
+                        <li>✓ Garansi 1 tahun</li>
+                        <li>✓ Free service 3x</li>
+                        <li>✓ Helm custom eksklusif</li>
+                    </ul>
+                    <a href="#kontak" class="btn btn-primary full">Ambil Promo</a>
+                </div>
+                <div class="promo-card featured">
+                    <div class="promo-badge">PALING LARIS</div>
+                    <h3>Paket Custom Bobber</h3>
+                    <p class="promo-desc">Full custom bobber + upgrade mesin + coating.</p>
+                    <div class="promo-price">
+                        <span class="old">Rp 18.000.000</span>
+                        <span class="new">Rp 14.500.000</span>
+                    </div>
+                    <ul class="promo-list">
+                        <li>✓ Desain 3D + revisi unlimited</li>
+                        <li>✓ Garansi 2 tahun</li>
+                        <li>✓ Free service 6x</li>
+                        <li>✓ Jaket custom + helm</li>
+                        <li>✓ Free antar se-Jabodetabek</li>
+                    </ul>
+                    <a href="#kontak" class="btn btn-primary full">Ambil Promo</a>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-badge">HEMAT 15%</div>
+                    <h3>Paket Custom Scrambler</h3>
+                    <p class="promo-desc">Full custom scrambler + ban dual purpose + cat.</p>
+                    <div class="promo-price">
+                        <span class="old">Rp 15.000.000</span>
+                        <span class="new">Rp 12.750.000</span>
+                    </div>
+                    <ul class="promo-list">
+                        <li>✓ Desain 3D sebelum pengerjaan</li>
+                        <li>✓ Garansi 1 tahun</li>
+                        <li>✓ Free service 3x</li>
+                        <li>✓ Aksesori touring</li>
+                    </ul>
+                    <a href="#kontak" class="btn btn-primary full">Ambil Promo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="kontak" id="kontak">
+        <div class="container">
+            <div class="section-title">
+                <span>HUBUNGI KAMI</span>
+                <h2>Konsultasi Gratis Sekarang!</h2>
+                <p>Isi form di bawah dan tim kami akan menghubungi Anda dalam 1x24 jam.</p>
+            </div>
+            <form class="kontak-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="No. WhatsApp" required>
+                    <select required>
+                        <option value="">-- Pilih Jenis Custom --</option>
+                        <option>Cafe Racer</option>
+                        <option>Bobber</option>
+                        <option>Scrambler</option>
+                        <option>Chopper</option>
+                        <option>Brat Style</option>
+                        <option>Flat Tracker</option>
+                    </select>
+                </div>
+                <textarea placeholder="Ceritakan konsep motor impianmu..." rows="5"></textarea>
+                <button type="submit" class="btn btn-primary">Kirim Konsultasi</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>🏍️ CustomMotor.id</h3>
+                <p>Toko custom motor online terpercaya di Indonesia. Wujudkan motor impianmu bersama kami.</p>
+            </div>
+            <div>
+                <h4>Kontak</h4>
+                <p>📍 Jl. Raya Menggalau No. 67 Kota Cirebon</p>
+                <p>📞 +62 899-7124-736</p>
+                <p>✉️ syahalwi19@gmal.com</p>
+            </div>
+            <div>
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08.00 - 20.00</p>
+                <p>Sabtu: 09.00 - 18.00</p>
+                <p>Minggu: Tutup</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CustomMotor.id - All Rights Reserved - Pembuat Website, Muhammad Syah Alwi Al Khasani</p>
+        </div>
+    </footer>
+
+</body>
+</html>
