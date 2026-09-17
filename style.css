@@ -449,7 +449,7 @@ section {
 
 .katalog-card {
     background: var(--white);
-    border-radius: 24px;              /* sudut kartu melengkung */
+    border-radius: 24px;              
     overflow: hidden;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     transition: 0.4s ease;
@@ -466,8 +466,8 @@ section {
 /* ====== GAMBAR MOTOR ====== */
 .katalog-img {
     width: 100%;
-    height: 240px;                    /* tinggi pas untuk gambar motor */
-    padding: 14px;                    /* jarak gambar dari tepi kartu */
+    height: 240px;                   
+    padding: 14px;                    
     overflow: hidden;
     background: linear-gradient(135deg, #f8f8f8, #ececec);
     display: flex;
@@ -478,16 +478,16 @@ section {
 .katalog-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                /* gambar penuh tanpa distorsi */
-    object-position: center;          /* fokus di tengah */
-    border-radius: 16px;              /* sudut gambar melengkung */
+    object-fit: cover;                
+    object-position: center;          
+    border-radius: 16px;              
     transition: transform 0.5s ease;
     display: block;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .katalog-card:hover .katalog-img img {
-    transform: scale(1.05);           /* zoom halus saat hover */
+    transform: scale(1.05);          
 }
 
 /* ====== BODY KARTU ====== */
