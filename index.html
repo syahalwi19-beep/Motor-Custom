@@ -251,13 +251,11 @@
     <!-- SCRIPT TOGGLE -->
     <script>
         function toggleLayanan(card) {
-            // Tutup kartu lain yang sedang terbuka (opsional - hilangkan jika ingin multi-open)
             document.querySelectorAll('.layanan-card').forEach(function(item) {
                 if (item !== card) {
                     item.classList.remove('active');
                 }
             });
-            // Toggle kartu yang diklik
             card.classList.toggle('active');
         }
     </script>
@@ -274,7 +272,7 @@
 
                 <div class="katalog-card">
                     <div class="katalog-img">
-                        <img src="caferacer-custom.jpg" alt="Cafe Racer">
+                        <img src="gambar/caferacer-custom.jpg" alt="Cafe Racer">
                     </div>
                     <div class="katalog-body">
                         <span class="tag">Populer</span>
@@ -418,14 +416,15 @@
                 <h2>Konsultasi Gratis Sekarang!</h2>
                 <p>Isi form di bawah dan tim kami akan menghubungi Anda dalam 1x24 jam.</p>
             </div>
-            <form class="kontak-form">
+
+            <form class="kontak-form" id="waForm" onsubmit="kirimKeWA(event)">
                 <div class="form-row">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <input type="email" placeholder="Email" required>
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                    <input type="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="form-row">
-                    <input type="tel" placeholder="No. WhatsApp" required>
-                    <select required>
+                    <input type="tel" id="telepon" placeholder="No. WhatsApp" required>
+                    <select id="jenis" required>
                         <option value="">-- Pilih Jenis Custom --</option>
                         <option>Cafe Racer</option>
                         <option>Bobber</option>
@@ -435,11 +434,43 @@
                         <option>Flat Tracker</option>
                     </select>
                 </div>
-                <textarea placeholder="Ceritakan konsep motor impianmu..." rows="5"></textarea>
-                <button type="submit" class="btn btn-primary">Kirim Konsultasi</button>
+                <textarea id="pesan" placeholder="Ceritakan konsep motor impianmu..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Kirim ke WhatsApp 💬</button>
             </form>
         </div>
     </section>
+
+    <script>
+        const NOMOR_WA = "628997124736"; 
+
+        function kirimKeWA(event) {
+            event.preventDefault(); 
+
+            const nama    = document.getElementById('nama').value.trim();
+            const email   = document.getElementById('email').value.trim();
+            const telepon = document.getElementById('telepon').value.trim();
+            const jenis   = document.getElementById('jenis').value;
+            const pesan   = document.getElementById('pesan').value.trim();
+
+            if (!nama || !email || !telepon || !jenis || !pesan) {
+                alert('Mohon lengkapi semua data terlebih dahulu ya! 🙏');
+                return;
+            }
+
+            const isiPesan =
+                `Halo CustomMotor.id 👋%0A%0A` +
+                `Saya ingin konsultasi custom motor:%0A%0A` +
+                `📝 *Nama:* ${nama}%0A` +
+                `📧 *Email:* ${email}%0A` +
+                `📱 *No. WA:* ${telepon}%0A` +
+                `🏍️ *Jenis Custom:* ${jenis}%0A%0A` +
+                `💬 *Pesan:*%0A${pesan}%0A%0A` +
+                `Mohon info lebih lanjut. Terima kasih! 🙏`;
+
+            const url = `https://wa.me/${NOMOR_WA}?text=${isiPesan}`;
+            window.open(url, '_blank');
+        }
+    </script>
 
     <!-- FOOTER -->
     <footer class="footer">
